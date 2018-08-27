@@ -132,3 +132,9 @@ def update
   end
 end
 ```
+
+## Some stuff I looked up.
+- Transactions should be no issue, even if they are used in services called in services. They can be nested.
+- Errors should be no issue if we always return the record at the end of the execute (other solution is a response object or a block)
+- calling `destroyed?` checks if a record is destroyed, like `persisted?` checks if an object is stored in the db. Sadly there is no way to do this with updating. `changed?` is cool but will return false after the object is saved (obviously).
+
